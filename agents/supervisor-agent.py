@@ -85,10 +85,6 @@ agent_builder.add_edge("tool_node", "llm_call")
 
 agent = agent_builder.compile()
 
-from IPython.display import Image, display
-
-display(Image(agent.get_graph(xray=True).draw_mermaid_png()))
-
 
 if __name__ == "__main__":
     messages = [HumanMessage(content="Add 3 and 4.")]
